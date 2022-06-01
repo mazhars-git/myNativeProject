@@ -1,10 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {Pressable, StyleSheet, Text, View, Image } from 'react-native';
+import {Pressable, StyleSheet, Text, View, Image} from 'react-native';
 import { SafeAreaView, ScrollView } from 'react-native-web';
 
+// export const Button = ({title}) => {
+    
+//     <Pressable 
+//       style={{backgroundColor: 'blue', padding: 10, alignItems: 'center' }}
+//       onPress={() =>{
+//       alert("Pressed")
+//       }}>
+
+//       <Text style={{color: 'white'}}>
+//          {title}
+//       </Text>
+//   </Pressable>
+// }
+
+
 export default function App() {
-  return (
+  return (   
+
     <SafeAreaView>
       <ScrollView>
       <View style={{height: '50px', backgroundColor: 'red'}}>
@@ -31,13 +47,6 @@ export default function App() {
 
       </View>
 
-      <Pressable onPress={() =>{
-          alert("Pressed")
-      }}>
-          <Text>
-              My button
-          </Text>
-      </Pressable>
 
       <View>
         <Text>
@@ -48,8 +57,9 @@ export default function App() {
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
         </Text>
       </View>
-
       </ScrollView>
+
+      {/* <Button title="Press" /> */}
 
     </SafeAreaView>
   );
