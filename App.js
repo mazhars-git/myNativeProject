@@ -3,26 +3,27 @@ import React from 'react';
 import {Pressable, StyleSheet, Text, View, Image} from 'react-native';
 import { SafeAreaView, ScrollView } from 'react-native-web';
 
-export const Button = ({title}) => {
+// export const Button = ({title}) => {
    
-  return(
-    <Pressable 
-      style={{backgroundColor: 'blue', padding: 10, alignItems: 'center', marginBottom: 20 }}
-      onPress={() =>{
-      alert("Pressed")
-      }}>
+//   return(
+//     <Pressable 
+//       style={{backgroundColor: 'blue', padding: 10, alignItems: 'center', marginBottom: 20 }}
+//       onPress={() =>{
+//       alert("Pressed")
+//       }}>
 
-      <Text style={{color: 'white'}}>{title}</Text>
-  </Pressable>
-  );
-}
+//       <Text style={{color: 'white'}}>{title}</Text>
+//   </Pressable>
+//   );
+// }
 
 
 export default function App() {
   return (   
 
-    <SafeAreaView>
-      <ScrollView>
+    <SafeAreaView style={{flex: 1}}>
+
+      {/* <ScrollView>
       <View style={{height: '50px', backgroundColor: 'red'}}>
           <Text>This is a Text.</Text>
       </View>
@@ -59,12 +60,39 @@ export default function App() {
       </View>
       </ScrollView>
 
-      <Button title="Press" />
+      <Button title="Press" /> */}
 
+
+      <View style={{
+        flex: 1, 
+        flexDirection: "column",
+        alignItems: "center"
+        
+        }}>
+        <View style={styles.view1} />
+        <View style={styles.view2} />
+        <View style={styles.view3} />
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  view1: {
+    height: 150,
+    width: 150,
+    backgroundColor: 'red'
+  },
+  view2: {
+    height: 150,
+    width: 150,
+    backgroundColor: 'green',
+    alignSelf: "flex-end"
+  },
+  view3: {
+    height: 150,
+    width: 150,
+    backgroundColor: 'blue'
+  },
+
 });
