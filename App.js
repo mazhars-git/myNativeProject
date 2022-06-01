@@ -3,19 +3,19 @@ import React from 'react';
 import {Pressable, StyleSheet, Text, View, Image} from 'react-native';
 import { SafeAreaView, ScrollView } from 'react-native-web';
 
-// export const Button = ({title}) => {
-    
-//     <Pressable 
-//       style={{backgroundColor: 'blue', padding: 10, alignItems: 'center' }}
-//       onPress={() =>{
-//       alert("Pressed")
-//       }}>
+export const Button = ({title}) => {
+   
+  return(
+    <Pressable 
+      style={{backgroundColor: 'blue', padding: 10, alignItems: 'center', marginBottom: 20 }}
+      onPress={() =>{
+      alert("Pressed")
+      }}>
 
-//       <Text style={{color: 'white'}}>
-//          {title}
-//       </Text>
-//   </Pressable>
-// }
+      <Text style={{color: 'white'}}>{title}</Text>
+  </Pressable>
+  );
+}
 
 
 export default function App() {
@@ -59,7 +59,7 @@ export default function App() {
       </View>
       </ScrollView>
 
-      {/* <Button title="Press" /> */}
+      <Button title="Press" />
 
     </SafeAreaView>
   );
